@@ -1,0 +1,10 @@
+[build]
+builder = "nix"
+
+[deploy]
+polls = 10
+
+[[services]]
+name = "app"
+buildCommand = "npm run build --workspaces"
+startCommand = "npm start"
